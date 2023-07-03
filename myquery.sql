@@ -13,3 +13,4 @@ select * from myuser;
 insert into myuser(name)values('neo');
 insert into myuser(name)values('Meta');
 
+insert into myuser(name)values('jarvis');

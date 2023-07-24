@@ -1,0 +1,78 @@
+Tables Creation 
+
+--Users Table Creation 
+Create Table Users( 
+  User_Id Int Not Null Auto_Increment, 
+  Email_Id Varchar(25) Not Null, 
+  Phone_No Char(10) Not Null, 
+  Pass_Word Varchar(20) Not Null, 
+  First_Name Varchar(20) Not Null, 
+  Last_Name Varchar(20), 
+  City Varchar(20), 
+  Pincode Int, 
+  Dob Date Not Null, 
+  Gender Char(10), 
+  Primary Key(User_Id) 
+); 
+
+--Posts Table Creation 
+Create Table Posts( 
+   Post_Id Int Not Null Auto_Increment, 
+   Posted_User_Id Int Not Null, 
+   Post_Date Date Not Null, 
+   Post_Content Varchar(50) Not Null, 
+   Primary Key(Post_Id) 
+); 
+
+--Posts_Shares Table Creation 
+Create Table Post_Shares( 
+  Post_Id Int Not Null, 
+  Shared_User_Id Int Not Null, 
+  Primary Key(Post_Id,Shared_User_Id) 
+); 
+ 
+--Posts_Shares Table Creation 
+Create Table Post_Likes( 
+  Post_Id Int Not Null, 
+  Liked_User_Id Int Not Null, 
+  Primary Key(Post_Id,Liked_User_Id) 
+); 
+ 
+--Posts_Shares Table Creation 
+Create Table Post_Comments( 
+  Comment_Id Int Not Null Auto_Increment, 
+  Post_Id Int Not Null, 
+  Commented_Date Date, 
+  Comment_Content Varchar(50), 
+  Commented_User_Id Int Not Null, 
+  Primary Key(Comment_Id) 
+); 
+
+--Pages Table Creation 
+Create Table Pages( 
+   Page_Id Int Not Null Auto_Increment, 
+   Page_Name Varchar(20) Not Null, 
+   Page_Content Varchar(50) Not Null, 
+   Primary Key(Page_Id) 
+); 
+ 
+--Page_Likes Table Creation 
+Create Table Page_Likes( 
+  Page_Id Int Not Null, 
+  Page_User_Id Int Not Null, 
+  Primary Key(Page_Id,Page_User_Id) 
+); 
+
+--Page_Likes Table Creation 
+Create Table Friends( 
+   User_Id Int Not Null, 
+   Friend_Id Int Not Null, 
+   Primary Key(User_Id,Friend_Id) 
+); 
+
+--Page_Likes Table Creation  
+Create Table Comments_Like( 
+  Comment_Id Int Not Null, 
+  Comment_Liked_User_Id Int Not Null, 
+  Primary Key (Comment_Id,Comment_Liked_User_Id) 
+); 

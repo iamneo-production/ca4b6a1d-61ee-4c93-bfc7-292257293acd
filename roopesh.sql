@@ -1,1 +1,0 @@
-select count(DOB_YEAR) from facebook where DOB_YEAR =1999;

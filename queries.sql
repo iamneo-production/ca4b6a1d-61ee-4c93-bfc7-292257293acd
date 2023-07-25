@@ -1,3 +1,0 @@
-SELECT COUNT(*) AS TotalUsers
-FROM facebook
-WHERE DOB_YEAR = 1999;

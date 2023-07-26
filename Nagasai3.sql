@@ -19,7 +19,7 @@ where gender='female'
 group by gender;
 
 --query to find the percentage of female users among users above the age of 17.
-select count(*)*100/ (select count(*) from facebook) AS female_percentage 
+select count(*)*100/ (select count(*) from facebook where age>17) AS female_percentage 
 from FACEBOOK 
 where gender='female' and age>17 
 group by gender;

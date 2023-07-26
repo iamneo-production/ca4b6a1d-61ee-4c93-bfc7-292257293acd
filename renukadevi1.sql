@@ -7,7 +7,8 @@ WHERE DOB_YEAR = 1999;
 SELECT AGE, COUNT(*) AS UserCount
 FROM FACEBOOK
 GROUP BY AGE 
-order by age;
+order by  age;
+
 
 
 SELECT COUNT(*) AS TotalUsers

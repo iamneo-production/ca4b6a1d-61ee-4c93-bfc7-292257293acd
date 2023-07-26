@@ -15,7 +15,7 @@ FROM facebook
 WHERE GENDER = 'female'
 group by gender;
 
-SELECT (COUNT(*) * 100.0) / (SELECT COUNT(*) FROM facebook) AS FemalePercentage
+SELECT (COUNT(*) * 100.0) / (SELECT COUNT(*) FROM facebook where AGE>17 ) AS FemalePercentage
 FROM facebook
 WHERE AGE > 17 AND GENDER = 'female'
 GROUP BY GENDER;

@@ -1,6 +1,6 @@
 
--- Query To Find The Total Number Of Users Who Were Born In The Year 1999.
-select Count(*) as Total_users From FaceBook
+-- Query To Find The TOTAL Number Of Users Who Were Born In The Year 1999.
+SELECT Count(*) as Total_users From FaceBook
 Where DOB_Year=1999;
 
 -- Query To Count The Number Of Social Media Users For Each Age Group.`

@@ -2,7 +2,10 @@
 select count(*) as Totalusers from facebook
 where dob_year=1999;
 
--- Query to count the number of social media users for each age group.`
+
+
+-- Query to count the number of social media users for each age group.
+
 select age, count(*) as usercount from FACEBOOK
 group by age 
 order by age asc;

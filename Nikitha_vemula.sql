@@ -1,27 +1,26 @@
--- Query to find the total number of users who were born in the year 1999.
-select count(*) as Totalusers from facebook
-where dob_year=1999;
 
 
 
--- Query to count the number of social media users for each age group.
+--Find out the total  number of users who born in the year 1999
+SELECT  Count(*) AS TotalUsers
+From  FACEBOOK
+WHERE  DOB_YEAR = 1999;
 
-select age, count(*) as usercount from FACEBOOK
-group by age 
+
+--Counting the number of Facebook users for Each and every age group
+SELECT Age,Count(*) As UserCount FROM FACEBOOK
+GROUP BY Age 
 order by age asc;
 
---Query to find total users in social media above age 15.
-select count(*) as Totalusers from FACEBOOK 
-where age>15;
 
--- Query to find the percentage of female users who are using social media.
-select count(*)*100/ (select count(*) from facebook) AS female_percentage 
-from FACEBOOK 
-where gender='female' 
-group by gender;
+--find out the tOTAL users in facebook above age 15
+SELECT COUNT(*) AS TOTALUSERS FROM FACEBOOK
+WHERE AGE > 15;
 
---Query to find the percentage of female users among users above the age of 17.
-select count(*)*100/ (select count(*) from facebook where age>17) AS female_percentage 
-from FACEBOOK 
-where gender='female' and age>17 
-group by gender;
+
+--find out the percentage of female users who are using Facebook where gender represented as 'female'
+SELECT (COUNT(*) * 100.0) / (SELECT COUNT(*) FROM FACEBOOK) AS FemalePercentage FROM facebook WHERE GENDER = 'female'
+GROUP BY Gender;
+
+--find out the Percentage of female users among users Above age of 17
+Select (COUNT(*) * 100.0) / (SELECT COUNT(*) FROM facebook where age>17) AS FemalePercentage FROM fACEBOOK WHERE AGE > 17 AND GENDER = 'female' group by Gender;

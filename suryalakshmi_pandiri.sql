@@ -12,7 +12,7 @@ Where Dob_year=1999;
 
 
 
-Select Age, Count(*) as Usercount FROM FACEBOOK 
+Select Age,  Count(*) as Usercount FROM FACEBOOK 
 
 Group By AGE 
 

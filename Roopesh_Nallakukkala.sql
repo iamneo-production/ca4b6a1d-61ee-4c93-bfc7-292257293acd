@@ -1,7 +1,7 @@
 -- Query To Find The total Number Of Users Who Were born In The Year 1999.
 SELECT COUNT(*) AS TotalUsers
 From Facebook
-WHERE DOB_YEAR = 1999;
+WHERE DOB_YEAr = 1999;
 
 
 -- Query To Count The Number Of Social Media Users For each Age Group.

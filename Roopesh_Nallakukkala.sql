@@ -8,7 +8,7 @@ WHERE DOB_YEAr = 1999;
 SELECT AGE, COUNT(*) AS UserCount
 FROM FACEBOOK
 group by AGE
-order by AGE;
+order by AGE asc;
 
 
 --Query To Find Total Users In Social Media above Age 15.

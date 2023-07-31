@@ -16,4 +16,4 @@ Select Count(*) As above15_count From FACEBOOK Where Age>15;
 Select Count(*)*100/ (Select Count(*) From Facebook) AS Femalepercentage From FACEBOOK Where Gender='female' Group By Gender;
 
 --Query To Find The Percentage Of Female Users Among Users Above The Age Of 17.
-Select Count(*)*100/ (Select Count(*) From Facebook Where Age>17) AS Femalepercentage From FACEBOOK Where Gender='female' And Age>17 Group By Gender;
+Select Count(*)*100/(Select Count(*) From Facebook Where Age>17) AS Femalepercentage From FACEBOOK Where Gender='female' And Age>17 Group By Gender;

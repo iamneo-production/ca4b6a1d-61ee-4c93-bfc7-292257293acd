@@ -7,7 +7,7 @@ select count(*) AS total_users from facebook
 -- query to count the number of social media users for each age group.
  select age, count(*) as age_count from FACEBOOK
   group by age 
-  order by age asc;
+  order by age Asc;
 
 --query to find total users in social media above age 15.
  select count(*) as Users_above15 from FACEBOOK  

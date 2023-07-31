@@ -11,7 +11,7 @@ Select Count(*) As ABOVE15_count FROM FACEBOOK Where Age>15;
 
 -- Query To Find The Percentage Of FEMALE USERS Who Are Using SOCIAL MEDIA.
 Select Count(*)*100/ (Select Count(*) From Facebook) AS FEMALE_PERCENTAGE From FACEBOOK 
-Where Gender='female' GROUP By Gender;
+Where Gender='female' GROUP By Gender; 
 
 --Query To Find The Percentage Of FEMALE Users Among Users Above The Age Of 17.
 Select Count(*)*100/ (Select Count(*) From Facebook Where AGE>17) AS FEMALE_PERCENTAGE From FACEBOOK 

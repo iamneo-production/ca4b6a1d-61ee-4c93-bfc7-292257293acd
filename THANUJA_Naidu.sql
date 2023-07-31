@@ -10,5 +10,7 @@
  -- Query that Find the percentage of Female users who are using Social media.
  Select count(*)*100/ (select counT(*) from facebook) AS Percentage From FACEbOOK Where GendeR='female' Group By GendeR;
 
+
+
 --Query that find the percentage of female users among users above the age of 17.
 select count(*)*100/ (selecT count(*) from facebook where age>17) AS percentage from FacebOok  Where Gender='female' AND age>17 Group bY Gender;

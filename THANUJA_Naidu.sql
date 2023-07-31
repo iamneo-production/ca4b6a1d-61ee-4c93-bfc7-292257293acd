@@ -2,15 +2,12 @@
  Select count(*) as Total_users froM Facebook where Dob_YeaR = 1999;
 
 
-
 -- Query that Count the number of social media users for each age group.`
  select Age, count(*) as Users_count from FACEBOOK Group BY AgE ORDER by AgE ASC;
 
 
-
  --Query that Find total users in Social Media above age 15.
  Select count(*) AS count_users from FACeBOOK where AgE>15;
-
 
 
  -- Query that Find the percentage of Female users who are using Social media.
